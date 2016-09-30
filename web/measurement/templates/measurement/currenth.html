@@ -1,0 +1,10 @@
+{% if all_target %}
+    <h3>Here are all the recently started measurements:</h3>
+    <ul>
+        {%for tar in all_target %}
+        <li><a href="/measurement/{{ tar.msm_id}}">{{tar.target}}-{{tar.description}}</a> </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No current measurements</h3>
+{% endif %}
