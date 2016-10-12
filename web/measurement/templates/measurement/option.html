@@ -1,8 +1,22 @@
-<ul>
-        <h3>{{all_target.description}}</h3>
-        <h3>{{all_target.target}}</h3>
-        <li><a href="/measurement/stop/{{all_target.msm_id}}">Stop measurement</a> </li>
-        <li><a href="/measurement/result/{{all_target.msm_id}}">Result</a> </li>
+  {% load staticfiles %}
+  <html>
+  <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/changes.css' %}">
+  </head>
+  <body>
+
+        <ul>
+            <h3>{{all_target.description}}</h3>
+            <h3>{{all_target.target}}</h3>
+            <li><a href="/measurement/stop/{{all_target.msm_id}}">Stop measurement</a> </li>
+            <li><a href="/measurement/result/{{all_target.msm_id}}">Result</a> </li>
 
 
- </ul>
+        </ul>
+
+
+  </body>
+  </html>
+

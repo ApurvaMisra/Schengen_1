@@ -1,4 +1,5 @@
 from datetime import datetime
+from secret_file import *
 from .models import Target
 import time
 import datetime
@@ -12,7 +13,7 @@ from ripe.atlas.cousteau import (
 
 
 def atlas_api_call():
-    ATLAS_API_KEY = "511f7d2d-c20d-4293-8c98-6263057eb43f"
+    #ATLAS_API_KEY = ""
     q=Target.objects.all().last()
 
     if (q.specification.one_off is True):

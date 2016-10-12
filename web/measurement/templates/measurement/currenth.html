@@ -1,10 +1,20 @@
-{% if all_target %}
+  {% load staticfiles %}
+  <html>
+  <head>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/changes.css' %}">
+  </head>
+  <body>
+  {% if all_target %}
     <h3>Here are all the recently started measurements:</h3>
     <ul>
         {%for tar in all_target %}
         <li><a href="/measurement/{{ tar.msm_id}}">{{tar.target}}-{{tar.description}}</a> </li>
         {% endfor %}
     </ul>
-{% else %}
+  {% else %}
     <h3>No current measurements</h3>
-{% endif %}
+  {% endif %}
+  </body>
+  </html>

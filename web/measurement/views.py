@@ -133,15 +133,16 @@ def result(request,msm_idvar):
             list1=[]
             m=1
             startins=start_date
-            print startins
+            #print startins
             while(True):
                 date_min1=datetime.datetime.combine(startins, datetime.time.min)
                 date_max1 = datetime.datetime.combine(startins, datetime.time.max)
                 q1 = eval(desc).objects.filter(timestamp__range=[date_min1, date_max1])
                 b=Countries.objects.get(country=countr)
                 q2=q1.filter(countries=int(b.id))
-                print q1.count()
-                print q2.count()
+                q3=q1.filter(countries__isnull=False)
+                #print q1.count()
+                #print q2.count()
                 while(q2.count()==0):
                     startins = startins + timedelta(days=1)
                     date_min1 = datetime.datetime.combine(startins, datetime.time.min)
@@ -149,15 +150,31 @@ def result(request,msm_idvar):
                     q1 = eval(desc).objects.filter(timestamp__range=[date_min1, date_max1])
                     b = Countries.objects.get(country=countr)
                     q2 = q1.filter(countries=int(b.id))
+                    q3=q1.filter(countries__isnull=False)
 
-                ratio=(q2.count()/q1.count())
-                list1.append([m,ratio])
+                ratio=(q2.count()/q3.count())
+                ratio1=ratio*100
+                list1.append([m,ratio1])
                 m=m+1
                 startins=startins+timedelta(days=3)
                 if(startins>stop_date):
                     break
+            date_min2 = datetime.datetime.combine(start_date, datetime.time.min)
+            date_max2 = datetime.datetime.combine(stop_date, datetime.time.max)
+            l1=eval(desc).objects.filter(timestamp__range=[date_min2, date_max2])
+            lm = Countries.objects.get(country="OO")
+            lm1=Countries.objects.get(country="KI")
+            l2 = l1.filter(countries=int(lm.id))
+            l3=l1.filter(countries__isnull=False)
+            print date_min2
+            print date_max2
+            print l2.count()
+            print l3.count()
+            perc=(l2.count()/l3.count())*100
+            list2={"Missing data":perc}
+            context = {'reading': list1, 'reading1':list2}
+            #context={'reading':[['April', 1000],['May', 1170]]}
 
-            context = {'reading': list1}
             #q1=eval(desc).objects.filter(timestamp__contains=datetime.date()
             return render(request, 'measurement/graph.html', context)
 
