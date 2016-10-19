@@ -3,3 +3,5 @@
 secret_file.py
 
 secret_file_1
+
+*.pyc
