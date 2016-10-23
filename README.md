@@ -38,6 +38,7 @@ Client-side and design
     
 ##Installation Instructions
 **Prerequisite**: Apache, Django
+
 **Installing on Linux/Ubuntu**
 
 
@@ -51,6 +52,9 @@ Client-side and design
         pip install django-qsstats-magic
     4. Maxmind database:
         pip install geoip2
+    5. django-cron:
+        pip install django_cron
+        
 
 ##Usage
 For using the tool, API key is required for the corresponding account in RIPE Atlas through which the measurements have to be created, it is needed for both starting and stopping measurements.
