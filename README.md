@@ -52,8 +52,8 @@ Client-side and design
         pip install django-qsstats-magic
     4. Maxmind database:
         pip install geoip2
-    5. django-crontab:
-        pip install django-crontab
+    5. django-cron:
+        pip install django_cron
         
 
 ##Usage
