@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'googlecharts',
     'measurement',
+    'django_cron',
 
 ]
 
@@ -52,6 +53,12 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+CRON_CLASSES= [
+    'my_app.cron.MyCronJob',
+]
+
 
 ROOT_URLCONF = 'web.urls'
 

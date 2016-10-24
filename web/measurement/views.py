@@ -22,7 +22,6 @@ from django.http import HttpResponseRedirect
 from django.forms import ModelForm
 import datetime
 import json
-
 from datetime import timedelta
 
 
@@ -184,5 +183,7 @@ def result(request,msm_idvar):
         form = DateForm()
 
     return render(request, 'measurement/result.html', {'form': form})
+
+
 
 

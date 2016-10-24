@@ -96,7 +96,197 @@ class Traceroutemeasurement12(models.Model):
 
 class Relation12(models.Model):
     countries=models.ForeignKey(Countries)
-    traceroutemeasurement12=models.ForeignKey(Traceroutemeasurement12)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement12)
+
+
+class Traceroutemeasurement1(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation1')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation1(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement1)
+
+
+class Traceroutemeasurement2(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation2')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation2(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement2)
+
+
+class Traceroutemeasurement3(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation3')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation3(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement3)
+
+
+class Traceroutemeasurement4(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation4')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation4(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement4)
+
+class Traceroutemeasurement5(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation5')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation5(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement5)
+
+class Traceroutemeasurement6(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation6')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation6(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement6)
+
+
+class Traceroutemeasurement7(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation7')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation7(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement7)
+
+class Traceroutemeasurement8(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation8')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation8(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement8)
+
+
+
+
+class Traceroutemeasurement9(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation9')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation9(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement9)
+
+
+
+class Traceroutemeasurement10(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation10')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation10(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement10)
+
+
+
+
+class Traceroutemeasurement11(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation11')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation11(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement11)
+
+
+
+class Traceroutemeasurement13(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation13')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation13(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement13)
+
+
+
+
+
+class Traceroutemeasurement14(models.Model):
+    timestamp = models.DateTimeField(editable=True)
+    countries= models.ManyToManyField(Countries, through='relation14')
+
+
+    def __str__(self):
+        return '%s' % (self.id)
+
+
+class Relation14(models.Model):
+    countries=models.ForeignKey(Countries)
+    traceroutemeasurement=models.ForeignKey(Traceroutemeasurement14)
+
+
 
 
 
