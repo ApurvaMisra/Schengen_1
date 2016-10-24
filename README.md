@@ -52,6 +52,10 @@ Client-side and design
         pip install django-qsstats-magic
     4. Maxmind database:
         pip install geoip2
+        For updating the database every week: sudo add-apt-repository ppa:maxmind/ppa
+        sudo apt update
+        sudo apt install geoipupdate
+        follow the steps in- http://dev.maxmind.com/geoip/geoipupdate/
     5. django-cron:
         pip install django_cron
         
