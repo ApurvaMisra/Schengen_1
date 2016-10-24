@@ -53,7 +53,7 @@ Client-side and design
     4. Maxmind database:
         pip install geoip2
     5. django-cron:
-        pip install django_cron
+        pip install django-crontab
         
 
 ##Usage
