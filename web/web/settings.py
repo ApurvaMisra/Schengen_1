@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = [
 
 
 CRON_CLASSES= [
-    'my_app.cron.MyCronJob',
+    "measurement.cron.MyCronJob",
 ]
 
 

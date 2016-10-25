@@ -1,5 +1,6 @@
-from django_cron import CronJobBase, Schedule
 from __future__ import division
+from django_cron import CronJobBase, Schedule
+
 
 import datetime as DT
 from ripe.atlas.cousteau import AtlasResultsRequest
@@ -12,10 +13,10 @@ import json
 
 
 class MyCronJob(CronJobBase):
-    RUN_EVERY_MINS = 120 # every 2 hours
+    RUN_EVERY_MINS = 5 # every 2 hours
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
-    code = 'my_app.my_cron_job'    # a unique code
+    code = 'measurement.my_cron_job'    # a unique code
 
     def do(self):
         all_target = Target.objects.all()
@@ -82,6 +83,9 @@ class MyCronJob(CronJobBase):
                     b = Countries.objects.get(country=countrylist[m])
                     eval(rel).objects.create(traceroutemeasurement_id=int(tar1.id), countries_id=int(b.id))
                     m = m + 1
+
+
+
 
 
 
