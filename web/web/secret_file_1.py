@@ -1,1 +1,0 @@
-SECRET_KEY = 'ldgeedmvr31s3zfftjj=5=k(8u_hdlk+h%$s^fapwf22-#1^s5'
