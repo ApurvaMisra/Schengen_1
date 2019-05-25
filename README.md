@@ -1,5 +1,5 @@
-# Schengen_1
-This tool observes the change in internet routing by conducting traceroutes for targets in Europe. 
+# Schengen Routing- 
+This tool observes the change in internet routing by conducting traceroutes for targets in Europe, the aim of the project was to observe how secure was the data moving from one country in Schengen area to another. 
 
 ##Working
 The web interface communicates with RIPE Atlas through Cousteau, a Python client for
